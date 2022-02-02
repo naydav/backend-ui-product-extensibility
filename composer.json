@@ -1,7 +1,14 @@
 {
     "name": "devx/backend-ui-product-extensibility",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "N/A",
+    "require": {
+        "php": "~7.4.0||~8.1.0",
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-config": "*",
+        "magento/module-ui": "*"
+    },
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
