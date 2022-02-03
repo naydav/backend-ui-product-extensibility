@@ -1,18 +1,45 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright 2021 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="catalog">
-            <group id="product_extensibility" translate="label" sortOrder="1000" showInDefault="1">
+            <group id="backend_ui_product_extensibility" translate="label" sortOrder="1000" showInDefault="1">
                 <label>Product Extensibility</label>
-                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1">
+                <field id="is_enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
                     <label>Enable Product Extensibility</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="service_url" translate="label" type="text" sortOrder="20" showInDefault="1">
+                    <label>Remote Service URL</label>
+                    <validate>required-entry validate-url</validate>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="instance_tag" translate="label" type="text" sortOrder="30" showInDefault="1">
+                    <label>Instance Tag</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
+                </field>
+                <field id="product_sections" translate="label" type="text" sortOrder="40" showInDefault="1">
+                    <label>Sections Config</label>
+                    <depends>
+                        <field id="is_enabled">1</field>
+                    </depends>
                 </field>
             </group>
         </section>

@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
  * Copyright 2021 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -11,7 +10,19 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Devx_BackendUiProductExtensibility"/>
-</config>
+declare(strict_types=1);
+
+namespace Devx\BackendUiProductExtensibility\Api;
+
+use Devx\BackendUiProductExtensibility\Api\Data\ConfigInterface;
+
+/**
+ * @api
+ */
+interface ConfigProviderInterface
+{
+    /**
+     * @return ConfigInterface
+     */
+    public function getConfig(): ConfigInterface;
+}
