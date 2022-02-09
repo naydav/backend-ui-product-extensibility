@@ -65,7 +65,7 @@ class FetchProductData implements FetchProductDataInterface
             '%s?instance=%s&product=%s',
             $config->getServiceUrl(),
             urlencode($config->getInstanceTag()),
-            $productSku
+            urlencode($productSku)
         );
 
         try {
