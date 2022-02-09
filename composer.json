@@ -1,9 +1,9 @@
 {
     "name": "devx/backend-ui-product-extensibility",
-    "version": "2.0.3",
+    "version": "2.0.5",
     "description": "N/A",
     "require": {
-        "php": "~7.3.0||~8.1.0",
+        "php": "~7.4.0||~8.1.0",
         "magento/framework": "*",
         "magento/module-backend": "*",
         "magento/module-catalog": "*",
