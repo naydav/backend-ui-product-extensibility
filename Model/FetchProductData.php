@@ -59,9 +59,14 @@ class FetchProductData implements FetchProductDataInterface
     /**
      * @inheritdoc
      */
-    public function fetchData(ConfigInterface $config): array
+    public function fetchData(ConfigInterface $config, string $productSku = null): array
     {
-        $serviceUrl = $config->getServiceUrl();
+        $serviceUrl = sprintf(
+            '%s/instance/%s/product/%s',
+            $config->getServiceUrl(),
+            $config->getInstanceTag(),
+            $productSku
+        );
 
         try {
             $this->httpClient->get($serviceUrl);

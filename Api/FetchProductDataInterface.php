@@ -26,8 +26,9 @@ interface FetchProductDataInterface
 {
     /**
      * @param ConfigInterface $config
+     * @param string|null $productSku
      * @return array
      * @throws LocalizedException
      */
-    public function fetchData(ConfigInterface $config): array;
+    public function fetchData(ConfigInterface $config, string $productSku = null): array;
 }

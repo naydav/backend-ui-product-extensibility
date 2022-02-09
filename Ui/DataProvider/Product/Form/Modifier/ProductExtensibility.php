@@ -88,7 +88,10 @@ class ProductExtensibility extends AbstractModifier
         }
 
         try {
-            $productData = $this->fetchProductData->fetchData($config);
+            $productData = $this->fetchProductData->fetchData(
+                $config,
+                $this->locator->getProduct() ? $this->locator->getProduct()->getSku(): null
+            );
         } catch (\Exception $e) {
             return $meta;
         }

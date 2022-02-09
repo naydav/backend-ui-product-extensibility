@@ -29,7 +29,7 @@
                     </depends>
                 </field>
                 <field id="instance_tag" translate="label" type="text" sortOrder="30" showInDefault="1">
-                    <label>Instance Tag</label>
+                    <label>Instance</label>
                     <validate>required-entry</validate>
                     <depends>
                         <field id="is_enabled">1</field>
