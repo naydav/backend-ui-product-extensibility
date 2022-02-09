@@ -143,7 +143,7 @@ class ProductExtensibility extends AbstractModifier
                                 'componentType' => Container::NAME,
                                 'component' => 'Magento_Ui/js/form/components/html',
                                 'additionalClasses' => 'admin__fieldset-note',
-                                'content' => $content,
+                                'content' => $content['content'],
                             ],
                         ],
                     ],
