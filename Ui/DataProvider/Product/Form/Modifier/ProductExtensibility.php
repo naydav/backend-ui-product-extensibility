@@ -117,11 +117,11 @@ class ProductExtensibility extends AbstractModifier
 
     /**
      * @param string $title
-     * @param string $content
+     * @param array $content
      * @param int $key
      * @return array
      */
-    private function getSectionUiConfig(string $title, string $content, int $key): array
+    private function getSectionUiConfig(string $title, array $content, int $key): array
     {
         $sectionConfig = [
             'arguments' => [
